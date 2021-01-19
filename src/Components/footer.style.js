@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledFooter = styled.div`
     display: flex;
+    border-top: dotted 1px black;
 `
 
 export const Image = styled.img`

@@ -10,19 +10,37 @@ export const ContainerSearch = styled.div`
 `
 
 export const TitleSearchPage = styled.p`
+    font-size: 2.5rem;
+    font-weight: bold;
 `
 
 export const ContainerInput = styled.div`
 `
-export const Input = styled.input``
+
+export const Input = styled.input`
+    border-radius: 1rem;
+    outline: none;
+    border: solid 2px black;
+    padding: 0.2rem 0.8rem;
+    &:focus {
+        background-color:  #7773;
+    }
+`
 export const StyledDetails = styled.div`
-    border: solid 1px black;
-    margin: 2rem 0;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
 `
 export const Container = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 50rem;
+    border: solid 1px black;
+    box-shadow: 0 35px 20px #777;
+    &:hover {
+        background-color: #7773;
+    }
 `
 export const ImageMovie = styled.img``
 

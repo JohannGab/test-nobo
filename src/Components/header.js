@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import {StyledHeader, Container, TextTitle, Subtitle } from './header.style'
 
 const Header = ({ Title }) => {

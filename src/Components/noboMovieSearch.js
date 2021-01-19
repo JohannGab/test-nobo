@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
-import Header from '../Components/header'
-import Footer from '../Components/footer';
-import DefaultImage from '../Images/cinema-default.min.jpg'
+import Header from './header';
+import Footer from './footer';
+import DefaultImage from '../Images/cinema-default.min.jpg';
 
 import {
     StyledNoboMovieSearch,
@@ -58,7 +58,7 @@ const handleSearch = (value) => {
                     </ContainerSearch>
                     {filterDataMovie.map(res => 
                         <StyledDetails  key={res.show.id}>
-                            <Container  onClick={() => activatOpenAndClose()}  >
+                            <Container  onClick={() => activatOpenAndClose(res)}  >
                                 {res.show.image !== null 
                                 ?
                                     <ImageMovie 

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import NoboMovieSearch from '../Pages/noboMovieSearch';
-import NoboMovieDetails from '../Pages/noboMovieDetails';
+import NoboMovieSearch from '../Components/noboMovieSearch';
+import NoboMovieDetails from '../Components/noboMovieDetails';
 
 function App() {
 
 const [getData, setGetData] = useState([])
 const [openAndClose, setOpenAndClose] = useState(true)
+const [detail, setDetail] = useState([])
 
 useEffect(() => {
     getDataMovie()
@@ -25,15 +26,22 @@ const getDataMovie = () => {
     })
 }
 
-const activatOpenAndClose = () => {
+const activatOpenAndClose = (data) => {
     setOpenAndClose(!openAndClose)
+    setDetail(data)
 }
 
 return (
     <>
         {openAndClose 
-            ? <NoboMovieSearch getData={getData} activatOpenAndClose={activatOpenAndClose}/>
-            : <NoboMovieDetails />
+            ?   <NoboMovieSearch 
+                    getData={getData}
+                    activatOpenAndClose={activatOpenAndClose}
+                />
+            :   <NoboMovieDetails
+                    detail={detail}
+                    activatOpenAndClose={activatOpenAndClose} 
+                />
         }
     
     </>
