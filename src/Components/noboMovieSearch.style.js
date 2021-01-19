@@ -12,6 +12,9 @@ export const ContainerSearch = styled.div`
 export const TitleSearchPage = styled.p`
     font-size: 2.5rem;
     font-weight: bold;
+    @media screen and (max-width: 640px) {
+        font-size: 1.2rem; 
+    }
 `
 
 export const ContainerInput = styled.div`

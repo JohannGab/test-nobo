@@ -9,26 +9,38 @@ export const TitleDetail = styled.h4`
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
+    @media screen and (max-width: 640px) {
+        font-size: 1.2rem;
+    }
 `
 
 export const Container = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-left: 2rem;
+    @media screen and (max-width: 640px) {
+        margin-left: 0;
+    }
 `
 export const ContainerDetail = styled.div`
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 640px) {
+        display: block;
+        text-align: center;
+    }
 `
 
 export const ImageMovie = styled.img``
 
 export const ContainerSummary = styled.div`
     margin-left: 2rem;
+    @media screen and (max-width: 640px) {
+        margin: 0 1rem;
+    }
 `
 
 export const TitleText = styled.h5``
-
 export const Summary = styled.p``
 
 export const Link = styled.a`
