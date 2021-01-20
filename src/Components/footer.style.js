@@ -9,7 +9,8 @@ export const StyledFooter = styled.div`
 `
 
 export const Image = styled.img`
-    width: 40rem;
+    max-width:  40rem;
+    max-height: 40rem;
     @media screen and (max-width: 640px) {
         width: 100%;
     }
