@@ -1,30 +1,31 @@
 import styled from 'styled-components';
+import cinema from '../Images/cinema.min.jpg'
+import cinemaMobile from '../Images/cinema.mobile.min.jpg'
 
 export const StyledHeader = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-`
-
-export const Image = styled.img`
-    max-width: 100%;
+    justify-content: center;
+    height: 50rem;
+    background-image: url(${cinema});
+    @media screen and (max-width: 640px) {
+        background-image: url(${cinemaMobile});
+        height: 30rem;
+        justify-content: flex-start;
+        padding-top: 4rem;
+    }
 `
 
 export const Container = styled.div`
-    position: absolute;
     text-align: center;
     font-weight: bold;
-    bottom: 28rem;
-    @media screen and (max-width: 640px) {
-        bottom: 35rem;
-    }
 `
 
 export const TextTitle = styled.h2`
     font-size: 5rem;
     @media screen and (max-width: 640px) {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 `
 
